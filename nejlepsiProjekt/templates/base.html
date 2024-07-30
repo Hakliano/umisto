@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <title> {% block title %} {% endblock  %} </title>
+</head>
+
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Topic</a></li>
+            <li><a href="#">Subtopic</a></li>
+            <li><a href="{% url "register" %}">register</a></li>
+            <a href="{% url 'admin:index' %}">Admin</a>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    {% comment %}  
+    tady bude content z snippetu
+    {% endcomment %}
+    {% block content %}
+
+    {% endblock %}
+    
+    <footer>
+        <p>© 2024 Your Company</p>
+    </footer>
+</body>
+</html>
